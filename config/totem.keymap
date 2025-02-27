@@ -49,6 +49,11 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
         };
+
+        tilde {
+            bindings = <&kp GRAVE>;
+            key-positions = <10 11>;
+        };
     };
 
     macros {
