@@ -122,7 +122,7 @@
         &kp ESC    &bt BT_CLR  &kp UP    &kp LESS_THAN  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &none         &none      &none
         &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT      &kp LBKT                &kp RIGHT_BRACKET      &kp LEFT          &kp UP_ARROW  &kp RIGHT  &none
 &trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN      &kp LEFT_BRACE          &kp RIGHT_BRACE        &none             &kp DOWN      &none      &none  &trans
-                               &trans    &trans         &trans                  &mo 4                  &kp KP_N0         &trans
+                               &trans    &trans         &trans                  &trans                 &trans            &trans
             >;
         };
 
@@ -229,6 +229,15 @@
 &trans  &kp J        &kp LS(C)     &kp LC(F16)   &kp LS(V)      &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                    &trans        &kp LC(F12)    &kp LC(F11)    &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        trilayer {
+            if-layers = <1 2>;
+            then-layer = <4>;
         };
     };
 };
